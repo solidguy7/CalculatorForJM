@@ -1,0 +1,16 @@
+package Calculator;
+
+import java.util.Scanner;
+
+public class Input {
+
+    static Scanner sc = new Scanner(System.in);
+    static String str = sc.nextLine();
+    static String[] strings;
+
+    static String[] input() {
+        str.trim();
+        strings = str.split(" ");
+        return strings;
+    }
+}
