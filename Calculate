@@ -1,0 +1,19 @@
+package Calculator;
+
+public class Calculate {
+    static int res;
+    static int calculate(int var0, int var1, String oper) {
+        switch (oper) {
+            case "+" : res = var0 + var1;
+            break;
+            case "-" : res = var0 - var1;
+            break;
+            case "*" : res = var0 * var1;
+            break;
+            case "/" : res = var0 / var1;
+            break;
+            default: throw new IllegalArgumentException("You may have entered an unknown type of the operation");
+        }
+        return res;
+    }
+}
