@@ -1,0 +1,241 @@
+package Calculator;
+
+public class Main {
+    static String[] values;
+    static int a;
+    static int b;
+    static int c;
+    static int Arabic0;
+    static int Arabic1;
+    static int d;
+    static String toRome;
+
+    public static void main(String[] args) {
+        values = Input.input();
+        if(check0() >= 1 && check0() <= 10 && check1() >= 1 && check1() <= 10){
+            c = Calculate.calculate(a, b, values[1]);
+            System.out.println(c);
+        } else {
+            d = Calculate.calculate(toArabic0(), toArabic1(), values[1]);
+            System.out.println(toRome());
+//            throw new IllegalArgumentException("Your numbers must be from 1(I) till 10(X)");
+        }
+    }
+    public static int check0() {
+        switch (values[0]) {
+            case "1" : a = Integer.parseInt(values[0]);
+            break;
+            case "2" : a = Integer.parseInt(values[0]);
+            break;
+            case "3" : a = Integer.parseInt(values[0]);
+                break;
+            case "4" : a = Integer.parseInt(values[0]);
+                break;
+            case "5" : a = Integer.parseInt(values[0]);
+                break;
+            case "6" : a = Integer.parseInt(values[0]);
+                break;
+            case "7" : a = Integer.parseInt(values[0]);
+                break;
+            case "8" : a = Integer.parseInt(values[0]);
+                break;
+            case "9" : a = Integer.parseInt(values[0]);
+                break;
+            case "10" : a = Integer.parseInt(values[0]);
+                break;
+        }
+        return a;
+    }
+    public static int check1 () {
+        switch (values[2]) {
+            case "1" : b = Integer.parseInt(values[2]);
+                break;
+            case "2" : b = Integer.parseInt(values[2]);
+                break;
+            case "3" : b = Integer.parseInt(values[2]);
+                break;
+            case "4" : b = Integer.parseInt(values[2]);
+                break;
+            case "5" : b = Integer.parseInt(values[2]);
+                break;
+            case "6" : b = Integer.parseInt(values[2]);
+                break;
+            case "7" : b = Integer.parseInt(values[2]);
+                break;
+            case "8" : b = Integer.parseInt(values[2]);
+                break;
+            case "9" : b = Integer.parseInt(values[2]);
+                break;
+            case "10" : b = Integer.parseInt(values[2]);
+                break;
+        }
+        return b;
+    }
+    public static int toArabic0() {
+        switch (values[0]) {
+            case "I":
+                Arabic0 = Integer.parseInt("1");
+                break;
+            case "II":
+                Arabic0 = Integer.parseInt("2");
+                break;
+            case "III":
+                Arabic0 = Integer.parseInt("3");
+                break;
+            case "IV":
+                Arabic0 = Integer.parseInt("4");
+                break;
+            case "V":
+                Arabic0 = Integer.parseInt("5");
+                break;
+            case "VI":
+                Arabic0 = Integer.parseInt("6");
+                break;
+            case "VII":
+                Arabic0 = Integer.parseInt("7");
+                break;
+            case "VIII":
+                Arabic0 = Integer.parseInt("8");
+                break;
+            case "IX":
+                Arabic0 = Integer.parseInt("9");
+                break;
+            case "X":
+                Arabic0 = Integer.parseInt("10");
+                break;
+        }
+        return Arabic0;
+    }
+    public static int toArabic1() {
+        switch (values[2]) {
+            case "I":
+                Arabic1 = Integer.parseInt("1");
+                break;
+            case "II":
+                Arabic1 = Integer.parseInt("2");
+                break;
+            case "III":
+                Arabic1 = Integer.parseInt("3");
+                break;
+            case "IV":
+                Arabic1 = Integer.parseInt("4");
+                break;
+            case "V":
+                Arabic1 = Integer.parseInt("5");
+                break;
+            case "VI":
+                Arabic1 = Integer.parseInt("6");
+                break;
+            case "VII":
+                Arabic1 = Integer.parseInt("7");
+                break;
+            case "VIII":
+                Arabic1 = Integer.parseInt("8");
+                break;
+            case "IX":
+                Arabic1 = Integer.parseInt("9");
+                break;
+            case "X":
+                Arabic1 = Integer.parseInt("10");
+                break;
+        }
+        return Arabic1;
+    }
+    public static String toRome() {
+        switch (d) {
+            case 1 : toRome = "I";
+                break;
+            case 2 : toRome = "II";
+                break;
+            case 3 : toRome = "III";
+                break;
+            case 4 : toRome = "IV";
+                break;
+            case 5 : toRome = "V";
+                break;
+            case 6 : toRome = "VI";
+                break;
+            case 7 : toRome = "VII";
+                break;
+            case 8 : toRome = "VIII";
+                break;
+            case 9 : toRome = "IX";
+                break;
+            case 10 : toRome = "X";
+                break;
+            case 11 : toRome = "XI";
+                break;
+            case 12 : toRome = "XII";
+                break;
+            case 13 : toRome = "XIII";
+                break;
+            case 14 : toRome = "XIV";
+                break;
+            case 15 : toRome = "XV";
+                break;
+            case 16 : toRome = "XVI";
+                break;
+            case 17 : toRome = "XVII";
+                break;
+            case 18 : toRome = "XVIII";
+                break;
+            case 19 : toRome = "XIX";
+                break;
+            case 20 : toRome = "XX";
+                break;
+            case 21 : toRome = "XXI";
+                break;
+            case 24 : toRome = "XXIV";
+                break;
+            case 25 : toRome = "XXV";
+                break;
+            case 27 : toRome = "XXVII";
+                break;
+            case 28 : toRome = "XXVIII";
+                break;
+            case 30 : toRome = "XXX";
+                break;
+            case 32 : toRome = "XXXII";
+                break;
+            case 35 : toRome = "XXXV";
+                break;
+            case 36 : toRome = "XXXVI";
+                break;
+            case 40 : toRome = "XL";
+                break;
+            case 42 : toRome = "XLII";
+                break;
+            case 45 : toRome = "XLV";
+                break;
+            case 48 : toRome = "XLVIII";
+                break;
+            case 49 : toRome = "XLIX";
+                break;
+            case 50 : toRome = "L";
+                break;
+            case 54 : toRome = "LIV";
+                break;
+            case 56 : toRome = "LVI";
+                break;
+            case 60 : toRome = "LX";
+                break;
+            case 63 : toRome = "LXIII";
+                break;
+            case 64 : toRome = "LXIV";
+                break;
+            case 70 : toRome = "LXX";
+                break;
+            case 72 : toRome = "LXXII";
+                break;
+            case 80 : toRome = "LXXX";
+                break;
+            case 81 : toRome = "LXXXI";
+                break;
+            case 90 : toRome = "XC";
+                break;
+            case 100 : toRome = "C";
+                break;
+        }
+        return toRome;
+    }
+}
